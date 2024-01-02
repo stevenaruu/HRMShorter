@@ -32,7 +32,7 @@ export default async function handler(
     if (data.result === '1') {
       res.status(200).json({ name: data.name, resultCode: 200, result: data.name + " Check In" });
     } else if (data.result === '2') {
-      res.status(200).json({ resultCode: 200, result: data.name + " Check Out" });
+      res.status(200).json({ name: "", resultCode: 200, result: data.name + " Check Out" });
     } else if (data.result === '-1') {
       res.status(200).json({ resultCode: 500, result: 'Member ID Not Found' });
     } else if (data.result === '-2') {

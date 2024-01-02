@@ -19,7 +19,7 @@ export default function Home() {
           icon: "success"
         });
 
-        if(data.name !== null || data.name !== "" || data.name !== undefined) setName(data.name);
+        if(data.name !== "") setName(data.name);
       } else if (resultCode === 500) {
         Swal.fire({
           title: result,
